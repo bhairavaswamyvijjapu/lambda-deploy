@@ -9,7 +9,7 @@ var exportBucket;
 exports.handler = (event) => {
     var envReq = getParameterFromSystemManager();
     envReq.then(() => {
-        var foldername = event['mrnnumber'];
+        var foldername = event['mrnnumber1'];
         exportBucket = environment['envprefix'] + '-exportprocedurebucket';
         var params = {
             Bucket: exportBucket,
