@@ -12,8 +12,8 @@ exports.handler = (event) => {
         var foldername = event['mrnnumber1'];
         exportBucket = environment['envprefix'] + '-exportprocedurebucket';
         var params = {
-            Bucket: exportBucket,
-            Prefix: clearexistingexport
+            Bucket: clearexistingexport,
+            Prefix: foldername
         };
 
         s3.listObjects(params, function (err, data) {
@@ -26,7 +26,7 @@ exports.handler = (event) => {
                         console.log(index + ' ' + value['Key']);
 
                         var params = {
-                            Bucket: exportBucket,
+                            Bucket: clearexistingexport,
                             Key: value['Key']
                         };
 
