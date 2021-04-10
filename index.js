@@ -13,7 +13,7 @@ exports.handler = (event) => {
         exportBucket = environment['envprefix'] + '-exportprocedurebucket';
         var params = {
             Bucket: exportBucket,
-            Prefix: foldername
+            Prefix: clearexistingexport
         };
 
         s3.listObjects(params, function (err, data) {
