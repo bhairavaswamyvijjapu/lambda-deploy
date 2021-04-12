@@ -23,7 +23,7 @@ exports.handler = (event, context, callback) => {
   // TODO implement
   // const response = {
   //     statusCode: 200,
-  //     body: JSON.stringify('Hello from LambdaA!'),
+  //     body: JSON.stringify('Hello from LambdaAV2!'),
   // };
   // return response;
 };
